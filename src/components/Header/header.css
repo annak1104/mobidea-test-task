@@ -227,4 +227,12 @@
   .nav-list {
     display: none;
   }
+
+  .icon:hover {
+    animation: none;
+  }
+
+  .icon-heart:hover {
+    animation: none;
+  }
 }
