@@ -1,0 +1,165 @@
+:root {
+  --form-max-width: 380px;
+  --form-border-color: lightgrey;
+  --form-padding: 20px;
+  --form-border-radius: 4px;
+  --form-bg-color: #f6f6f6;
+  --form-hover-shadow: rgba(144, 238, 144, 0.5);
+
+  --header-font-size: 20px;
+  --header-margin-bottom: 20px;
+
+  --input-border-color: lightgrey;
+  --input-bg-color: #f3f3f3;
+  --input-font-size: 14px;
+  --input-focus-border-color: #4a90e2;
+
+  --label-font-size: 14px;
+  --label-color: #999;
+  --label-active-font-size: 12px;
+  --label-active-color: #4a90e2;
+
+  --button-bg-color: black;
+  --button-text-color: white;
+  --button-border-radius: 8px;
+
+  --error-color: red;
+  --error-font-size: 12px;
+
+  --media-max-width: 768px;
+}
+
+.form-class {
+  max-width: var(--form-max-width);
+  border: 2px solid var(--form-border-color);
+  padding: var(--form-padding);
+  border-radius: var(--form-border-radius);
+  margin: 0 auto;
+  background-color: var(--form-bg-color);
+}
+
+.form-class:hover {
+  box-shadow: 0 4px 8px var(--form-hover-shadow);
+}
+
+.form-header {
+  font-size: var(--header-font-size);
+  margin-bottom: var(--header-margin-bottom);
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 18px;
+  padding: 10px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row .form-input-container {
+  flex: 1;
+}
+
+.form-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--form-border-radius);
+  background-color: var(--input-bg-color);
+  font-size: var(--input-font-size);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-input:focus {
+  border-color: var(--input-focus-border-color);
+  outline: none;
+}
+
+.form-label {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  font-size: var(--label-font-size);
+  color: var(--label-color);
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.form-label.active {
+  top: -8px;
+  font-size: var(--label-active-font-size);
+  color: var(--label-active-color);
+  background-color: var(--form-bg-color);
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.form-button {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: var(--button-bg-color);
+  border-radius: var(--button-border-radius);
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.intel-label {
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  font-size: var(--label-active-font-size);
+  color: var(--label-active-color);
+  background-color: var(--form-bg-color);
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.iti__tel-input {
+  background-color: var(--input-bg-color);
+  font-size: 16px;
+  height: 38px;
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--form-border-radius);
+  width: 100%;
+}
+
+.iti__tel-input::placeholder {
+  color: transparent;
+}
+
+.iti__tel-input:focus {
+  border: 1px solid var(--input-focus-border-color);
+}
+
+.iti {
+  width: 100%;
+}
+
+.error-message {
+  display: flex;
+  color: var(--error-color);
+  font-size: var(--error-font-size);
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .form-class {
+    max-width: 100%;
+    margin: 0;
+  }
+  .form-button {
+    width: 30%;
+  }
+}
